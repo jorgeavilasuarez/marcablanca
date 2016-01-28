@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es" class=" webkit chrome win js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SsoftColombia</title>
+<!-- SEO ZONE -->
+<meta name="description" content=" UGA Turismo : Mayorista de turismo">
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+<meta name="keywords" content=" UGA  turismo mayorista de turismo, aruba, curacao, bonaire, cuba, jamaica, bahamas, puerto_rico, republica_dominicana, st_marteen, costa_rica, honduras, mexico, guatemala, panama, miami, orlando, chile, buenos_aires, brasil, uruguay, peru, quinceaneras, cruceros, caribe, centro america, norte america, sur america, colombia, bogota, mayoristas, Aruba, ugaturismo.com, turismo de Aruba, Aruba viajes, hoteles Aruba, Aruba resorts, playas de arena blanca, restaurantes de Aruba, Aruba windsurf, buceo Aruba, snuba, vela en Aruba, Aruba casinos, Snorkel, caribe, vacaciones en Aruba, isla, Aruba bodas, lunas de miel Aruba, Aruba todo incluido, vacaciones Aruba, Aruba vacaciones, turismo, turismo Colombia, vacaciones,  ofertas viaje, Paquetes TurÃ­sticos, Paquetes vacacionales ">
+<meta title="UGA Turismo : Mayorista de turismo">
+
+<link href="jquery-ui-1.8.6.custom.css" rel="stylesheet" type="text/css" />
+<link href="UgaStyles.css" rel="stylesheet" type="text/css" />
+<link href="validationEngine.jquery.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+
+<link href="jquery-ui-1.8.6.custom.css" rel="stylesheet" type="text/css" />
+<link href="UgaStyles.css" rel="stylesheet" type="text/css" />
+<link href="validationEngine.jquery.css" rel="stylesheet" type="text/css" />
+
+ <form name="formID" method="post" action="./Inicio" id="formID">
+
+<div id="vuelos" class="bcolor1 ui-tabs-panel ui-widget-content ui-corner-bottom">
+<div id="formID" method="post" class="contenidoBuscador">
+    <div class="radioButtonList">
+        <label class="contenidoBuscador">Ida Y Vuelta</label>
+        <input type="radio" checked="checked" value="0" name="modal_vuelos" id="modal_vuelos_0">
+        <label class="contenidoBuscador">Solo Ida</label>
+        <input type="radio" value="1" name="modal_vuelos" id="modal_vuelos_1">
+        <br>
+        <label class="contenidoBuscador">Multiples Destinos</label>
+        <input type="radio" value="1" name="modal_vuelos" id="modal_vuelos_2">
+    </div>
+    <div class="row">
+        <label class="contenidoBuscador">Origen</label>
+    </div>
+    <div class="row">
+        <input type="text" id="origen" class="validate[required] form-control input-large aeropuertos formaBuscar ui-autocomplete-input" placeholder="Ciudad de Origen" autocomplete="off">
+    </div>
+    <div class="row">
+        <label class="contenidoBuscador">Destino</label>
+    </div>
+    <div class="row">
+        <input type="text" class="validate[required]  form-control input-large aeropuertos formaBuscar ui-autocomplete-input" id="destino" placeholder="Ciudad de Destino" autocomplete="off">
+    </div>
+    <div class="row">
+        <label class="contenidoBuscador span">Fecha de salida</label>
+        <label class="spanSpace">&nbsp;</label>
+         <input type="text" id="FechaSalida" class="validate[required]  form-control input-medium span input-calendar" placeholder="Seleccione Fecha" readonly="readonly" style="background-image: url('calendario.png'); background-position-x: 99px;"/>
+        
+    </div>
+    <br>
+    <div class="row">
+        <label class="contenidoBuscador span" id="lblRegresoVuelos">Fecha de Regreso</label>
+        <label class="spanSpace">&nbsp;</label>
+		<input type="text" id="FechaLlegada" class="validate[required]  form-control input-medium span input-calendar" placeholder="Selecciona Fecha" readonly="readonly" style="background-image: url('calendario.png'); background-position-x: 99px;"/>
+        
+    </div>
+    <div class="row">
+        <label class="contenidoBuscador right14">Adultos(+12)</label>
+        <label class="contenidoBuscador right14">Niños(-11)</label>
+        <label class="contenidoBuscador right14">Infantes(-23 m)</label>
+    </div>
+    <div class="row SelecPasajeros">
+        <select id="adults" class="form-control input-small">
+            <option value="1" selected="selected">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        
+
+        <select id="childs" class="form-control input-small">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        
+        <label class="spanSpace">&nbsp;</label>
+
+        <select id="infants" class="form-control input-small">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        <label class="spanSpace">&nbsp;</label>
+
+    </div>
+    <div class="row">
+        <div style="width: 33%; float: left">&nbsp;</div>
+        <div id="edadNinos" style="float: left; width: 33%">
+            &nbsp;
+        </div>
+        <div id="edadInf" style="float: left; width: 33%">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <button id="btnBuscarVuelo" class="BotonBuscadorGeneral">Buscar</button>
+    </div>
+</div>
+</div>
+
+</form>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.autocomplete.js"></script>
+<script type="text/javascript" src="jquery.validationEngine.js"></script>
+<script type="text/javascript" src="jquery.validationEngine-es.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script type="text/javascript" src="search.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".formaBuscar").focus(function () {
+            this.select();
+        });
+        $(".formaBuscar").mouseup(function (e) {
+            e.preventDefault();
+        });
+    });
+</script>
+
+</body>
+</html>
