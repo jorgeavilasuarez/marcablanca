@@ -3,11 +3,14 @@
  * @returns {widget_package}
  */
 var widget_package = function () {
-    this.SSOFT_URL_BASE = "";
-    this.SSOFT_URL_HANDLER = "http://localhost:54494/handlers/PlanesMarcablanca.ashx";
+    this.widget_script_package = document.getElementById("widget_script_package");
+    this.URL_BASE = this.widget_script_package.getAttributeNode("data-url-base").value;
+    this.URL_SEARCH = this.widget_script_package.getAttributeNode("data-url-search").value;
+    this.URL_HANDLER = this.widget_script_package.getAttributeNode("data-url-handler").value;
+    this.BACKGROUND_COLOR = this.widget_script_package.getAttributeNode("data-background-color").value;
     //cargamos estilos y jquery
-    this.loadjscssfile(this.SSOFT_URL_BASE + "/static/packages/css/styles.css", "css");
-    this.loadjscssfile(this.SSOFT_URL_BASE + "/static/jquery.min.js", "js");
+    this.loadjscssfile(this.URL_BASE + "/static/packages/css/styles.css", "css");
+    this.loadjscssfile(this.URL_BASE + "/static/jquery.min.js", "js");
 };
 
 /**
@@ -43,7 +46,7 @@ widget_package.prototype.onChange_ddlZonaGeo = function (e) {
 
     if (this.ddlZonaGeo.val() !== "0") {
         this.showProgressBar();
-        jQuery.getJSON(this.SSOFT_URL_HANDLER + "?cz=" + this.ddlZonaGeo.val(), function (result) {
+        jQuery.getJSON(this.URL_HANDLER + "?cz=" + this.ddlZonaGeo.val(), function (result) {
             this.ddlPais.empty();
             jQuery.each(result, function (index, obj) {
                 if (index === 0) {
@@ -66,7 +69,7 @@ widget_package.prototype.onChange_ddlPais = function (e) {
 
     if (this.ddlPais.val() !== "0") {
         this.showProgressBar();
-        jQuery.getJSON(this.SSOFT_URL_HANDLER + "?cp=" + this.ddlPais.val(), function (result) {
+        jQuery.getJSON(this.URL_HANDLER + "?cp=" + this.ddlPais.val(), function (result) {
             this.ddlCiudad.empty();
 
             jQuery.each(result, function (index, obj) {
@@ -85,7 +88,7 @@ widget_package.prototype.onChange_ddlPais = function (e) {
  * @param {type} e 
  */
 widget_package.prototype.onClick_lbBuscar = function (e) {
-    var url = this.SSOFT_URL_SEARCH + "?ORIGEN=BUSCADOR";
+    var url = this.URL_SEARCH + "?ORIGEN=BUSCADOR";
 
     //zona
     if (this.ddlZonaGeo.val() !== null &&
@@ -135,14 +138,12 @@ widget_package.prototype.hideProgressBar = function () {
  * Ingresa al documento 
  */
 widget_package.prototype.enterDocument = function () {
-    jQuery.get(this.SSOFT_URL_BASE + "/static/packages/templates/packages.html", function (template) {
-        this.widget_script_package = jQuery("#widget_script_package");
+    jQuery.get(this.URL_BASE + "/static/packages/templates/packages.html", function (template) {
+        this.widget_script_package = jQuery(this.widget_script_package);
         this.divPackages = jQuery("<div class=\"ssoft\"></div>");
         this.divPackages.html(template);
         //color
-        this.divPackages.find(".bcolor3").css("background-color", this.widget_script_package.attr("data-bakcground-color"));
-        this.SSOFT_URL_SEARCH = this.widget_script_package.attr("data-url-search");
-
+        this.divPackages.find(".bcolor3").css("background-color", this.BACKGROUND_COLOR);
         this.divPackages.insertBefore("#widget_script_package");
         this.ddlZonaGeo = this.divPackages.find("#ucBuscador_UcBuscadorPlan_ddlZonaGeo");
         this.ddlTipologia = this.divPackages.find("#ucBuscador_UcBuscadorPlan_ddlTipologia");
@@ -155,7 +156,7 @@ widget_package.prototype.enterDocument = function () {
 
         this.showProgressBar();
 
-        jQuery.getJSON(this.SSOFT_URL_HANDLER + "?zgyt=0", function (result) {
+        jQuery.getJSON(this.URL_HANDLER + "?zgyt=0", function (result) {
 
             jQuery.each(result.Tipologias, function (index, obj) {
                 this.ddlTipologia.append(jQuery("<option />").val(obj.Codigo).text(obj.Descripcion));
