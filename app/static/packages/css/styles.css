@@ -38,13 +38,13 @@
 
 
 /*naranja*/
-.bcolor3 {
+.ssoft .bcolor3 {
     background-color: #F9AADD !important;
     border-radius: 22px;
 }
 
 .ssoft  .link-button.white {
-cursor: pointer;
+    cursor: pointer;
     color: #28ABE3;
     background-color: #FFF;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#CCC));
@@ -63,16 +63,13 @@ cursor: pointer;
     height: 33px;
 }
 
-.ssoft .contenedorBotonBuscar{
-
-    
-        float: none;
+.ssoft .contenedorBotonBuscar {
+    float: none;
     margin-top: 2px;
     margin-right: 17px;
-        width: 80px;
-    
-
+    width: 80px;
 }
+
 .ssoft .contenidoBuscador {
     max-height: 379px;
     color: #fff;
@@ -98,9 +95,7 @@ cursor: pointer;
     border-top: 1px solid #ccc;
     border-right: 1px solid #ccc;
     color: #888;
-
 }
-
 
 .ssoft  .titcomp {
     font-family: tahoma;
