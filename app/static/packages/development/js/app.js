@@ -1,4 +1,5 @@
 /**
+ * Inicialza el widget de paquetes.
  * @constructor 
  */
 var widget_package = function () {
@@ -7,16 +8,33 @@ var widget_package = function () {
     this.URL_SEARCH = this.widget_script_package.getAttributeNode("data-url-search").value;
     this.URL_HANDLER = this.widget_script_package.getAttributeNode("data-url-handler").value;
     this.BACKGROUND_COLOR = this.widget_script_package.getAttributeNode("data-background-color").value;
-    this.URL_TEMPLATE = "/static/packages/production/templates/packages.html";
     //cargamos estilos y jquery
-    this.loadjscssfile(this.URL_BASE + "/static/packages/production/css/styles.css", "css");
-    this.loadjscssfile(this.URL_BASE + "/static/jquery.min.js", "js");
+    this.loadjscssfile(this.URL_BASE + this.URL_STYLES, "css");
+    this.loadjscssfile(this.URL_BASE + this.URL_JQUERY, "js");
 };
 
 /**
+ * Contiene la url de los estilos css.
+ * @const
+ */
+widget_package.prototype.URL_STYLES = "/static/packages/production/css/styles.css";
+
+/**
+ * Contiene la url de la plantilla.
+ * @const
+ */
+widget_package.prototype.URL_TEMPLATE = "/static/packages/production/templates/packages.html";
+
+/**
+ * Contiene la url de jQuery.
+ * @const
+ */
+widget_package.prototype.URL_JQUERY = "/static/jquery.min.js";
+
+/**
  * Metodo generico para descargar recursos dinamicamente
- * @param {type} filename
- * @param {type} filetype 
+ * @param {string} filename
+ * @param {string} filetype 
  */
 widget_package.prototype.loadjscssfile = function (filename, filetype) {
     if (filetype === "js") { //if filename is a external JavaScript file
@@ -39,8 +57,7 @@ widget_package.prototype.loadjscssfile = function (filename, filetype) {
 
 /**
  * Controla el change del select de zonas  
- * @param {type} e
- * @returns {undefined}
+ * @param {Event} e 
  */
 widget_package.prototype.onChange_ddlZonaGeo = function (e) {
 
@@ -61,9 +78,9 @@ widget_package.prototype.onChange_ddlZonaGeo = function (e) {
     }
 };
 
-/*
+/**
  * Controla el change del select de zonas 
- * @param {type} e 
+ * @param {Event} e 
  */
 widget_package.prototype.onChange_ddlPais = function (e) {
 
@@ -83,9 +100,9 @@ widget_package.prototype.onChange_ddlPais = function (e) {
     }
 };
 
-/*
+/**
  * Controla el click del boton buscar
- * @param {type} e 
+ * @param {Element} e 
  */
 widget_package.prototype.onClick_lbBuscar = function (e) {
     var url = this.URL_SEARCH + "?ORIGEN=BUSCADOR";
@@ -156,38 +173,45 @@ widget_package.prototype.enterDocument = function () {
 
         this.showProgressBar();
 
-        jQuery.getJSON(this.URL_HANDLER + "?zgyt=0", function (/** type{ObjectResult} */result) {
+        jQuery.getJSON(this.URL_HANDLER + "?zgyt=0", this.loadTipologiasYZonasGeograficas.bind(this));
 
-            jQuery.each(result.Tipologias, function (index, obj) {
-                this.ddlTipologia.append(jQuery("<option />").val(obj.Codigo).text(obj.Descripcion));
-            }.bind(this));
-
-            this.ddlZonaGeo.empty();
-
-            this.ddlZonaGeo.change(this.onChange_ddlZonaGeo.bind(this));
-
-            jQuery.each(result.ZonaGeograficas, function (index, obj) {
-                if (index === 0) {
-                    this.ddlZonaGeo.append(jQuery("<option>").val("0").text("Todas las Zona Geogr\u00e1ficas"));
-                }
-                this.ddlZonaGeo.append(jQuery("<option />").val(obj.Codigo).text(obj.Descripcion));
-            }.bind(this));
-
-            this.hideProgressBar();
-
-        }.bind(this));
     }.bind(this));
+};
+
+/**
+ * Carga tipologias y zonas geograficas
+ * @param {TipologiasYZonasGeograficas} result 
+ */
+widget_package.prototype.loadTipologiasYZonasGeograficas = function (result) {
+
+    jQuery.each(result.Tipologias, function (index, obj) {
+        this.ddlTipologia.append(jQuery("<option />").val(obj.Codigo).text(obj.Descripcion));
+    }.bind(this));
+
+    this.ddlZonaGeo.empty();
+
+    this.ddlZonaGeo.change(this.onChange_ddlZonaGeo.bind(this));
+
+    jQuery.each(result.ZonaGeograficas, function (index, obj) {
+        if (index === 0) {
+            this.ddlZonaGeo.append(jQuery("<option>").val("0").text("Todas las Zona Geogr\u00e1ficas"));
+        }
+        this.ddlZonaGeo.append(jQuery("<option />").val(obj.Codigo).text(obj.Descripcion));
+    }.bind(this));
+
+    this.hideProgressBar();
+
 
 };
 
 /** 
- * se ejecuta cuando jquery carga completamente  
+ * Se ejecuta cuando jquery carga completamente y es llamada por el arhivo jQuery modificado. 
  */
 window["jqueryCargado"] = function () {
     //evitamos colisiones de jquery
     jQuery.noConflict();
-    obj_widget_package.enterDocument();
+    __obj_widget_package.enterDocument();
 }.bind(this);
 
 //punto de entrada
-var obj_widget_package = new widget_package();
+var __obj_widget_package = new widget_package();

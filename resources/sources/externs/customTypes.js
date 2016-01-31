@@ -1,20 +1,20 @@
 /**
- * @record
+ * @constructor
  */
 function ObjectResult() {};
-/** @type {integer} */
+/** @type {number} */
 ObjectResult.prototype.Codigo;
 
 /** @type {string} */
 ObjectResult.prototype.Descripcion;
 
 /**
- * @record
+ * @constructor
  */
 function TipologiasYZonasGeograficas() {};
 
 /** @type {Array.<ObjectResult>} */
 TipologiasYZonasGeograficas.prototype.Tipologias;
 
-/** @type {Array.<ZonaGeograficas>} */
+/** @type {Array.<ObjectResult>} */
 TipologiasYZonasGeograficas.prototype.ZonaGeograficas;

@@ -41,7 +41,7 @@ var jQuerySelector;
 var jQueryCallback;
 
 /**
- * @record
+ * @constructor
  */
 function jQueryAjaxSettings() {};
 
