@@ -5,7 +5,6 @@
 var widget_package = function () {
     this.SSOFT_URL_BASE = "";
     this.SSOFT_URL_HANDLER = "http://localhost:54494/handlers/PlanesMarcablanca.ashx";
-    this.SSOFT_URL_SEARCH = "http://www.turinco.co/pagina/Planes";
     //cargamos estilos y jquery
     this.loadjscssfile(this.SSOFT_URL_BASE + "/static/packages/css/styles.css", "css");
     this.loadjscssfile(this.SSOFT_URL_BASE + "/static/jquery.min.js", "js");
@@ -45,6 +44,7 @@ widget_package.prototype.onChange_ddlZonaGeo = function (e) {
     if (this.ddlZonaGeo.val() !== "0") {
         this.showProgressBar();
         jQuery.getJSON(this.SSOFT_URL_HANDLER + "?cz=" + this.ddlZonaGeo.val(), function (result) {
+            this.ddlPais.empty();
             jQuery.each(result, function (index, obj) {
                 if (index === 0) {
                     this.ddlPais.append(jQuery("<option selected=\"selected\">").val("0").text("Todos los Paises"));
@@ -68,8 +68,8 @@ widget_package.prototype.onChange_ddlPais = function (e) {
         this.showProgressBar();
         jQuery.getJSON(this.SSOFT_URL_HANDLER + "?cp=" + this.ddlPais.val(), function (result) {
             this.ddlCiudad.empty();
-            
-            jQuery.each(result, function (index, obj) {                
+
+            jQuery.each(result, function (index, obj) {
                 if (index === 0) {
                     this.ddlCiudad.append(jQuery("<option selected=\"selected\">").val("0").text("Todas las ciudades"));
                 }
@@ -88,22 +88,26 @@ widget_package.prototype.onClick_lbBuscar = function (e) {
     var url = this.SSOFT_URL_SEARCH + "?ORIGEN=BUSCADOR";
 
     //zona
-    if (this.ddlZonaGeo.val() !== "0") {
+    if (this.ddlZonaGeo.val() !== null &&
+            this.ddlZonaGeo.val() !== "0") {
         url += "&ZonaGeo=" + this.ddlZonaGeo.val();
     }
 
     //pais
-    if (this.ddlPais.val() !== "0") {
+    if (this.ddlPais.val() !== null &&
+            this.ddlPais.val() !== "0") {
         url += "&IdPais=" + this.ddlPais.val();
     }
 
     //pais
-    if (this.ddlCiudad.val() !== "0") {
+    if (this.ddlCiudad.val() !== null &&
+            this.ddlCiudad.val() !== "0") {
         url += "&IdCiudad=" + this.ddlCiudad.val();
     }
 
     //tipologia
-    if (this.ddlTipologia.val() !== "0") {
+    if (this.ddlTipologia.val() !== null &&
+            this.ddlTipologia.val() !== "0") {
         url += "&IdTipologia=" + this.ddlTipologia.val();
     }
 
@@ -132,8 +136,13 @@ widget_package.prototype.hideProgressBar = function () {
  */
 widget_package.prototype.enterDocument = function () {
     jQuery.get(this.SSOFT_URL_BASE + "/static/packages/templates/packages.html", function (template) {
+        this.widget_script_package = jQuery("#widget_script_package");
         this.divPackages = jQuery("<div class=\"ssoft\"></div>");
         this.divPackages.html(template);
+        //color
+        this.divPackages.find(".bcolor3").css("background-color", this.widget_script_package.attr("data-bakcground-color"));
+        this.SSOFT_URL_SEARCH = this.widget_script_package.attr("data-url-search");
+
         this.divPackages.insertBefore("#widget_script_package");
         this.ddlZonaGeo = this.divPackages.find("#ucBuscador_UcBuscadorPlan_ddlZonaGeo");
         this.ddlTipologia = this.divPackages.find("#ucBuscador_UcBuscadorPlan_ddlTipologia");
@@ -158,7 +167,7 @@ widget_package.prototype.enterDocument = function () {
 
             jQuery.each(result.ZonaGeograficas, function (index, obj) {
                 if (index === 0) {
-                    this.ddlZonaGeo.append(jQuery("<option />").val("0").text("Todas las Zona Geogr\u00e1ficas"));
+                    this.ddlZonaGeo.append(jQuery("<option>").val("0").text("Todas las Zona Geogr\u00e1ficas"));
                 }
                 this.ddlZonaGeo.append(jQuery("<option />").val(obj.Codigo).text(obj.Descripcion));
             }.bind(this));
@@ -179,7 +188,6 @@ function jqueryCargado() {
     jQuery.noConflict();
     obj_widget_package.enterDocument();
 }
-;
 
 //punto de entrada
 var obj_widget_package = new widget_package();
