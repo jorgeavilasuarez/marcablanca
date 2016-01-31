@@ -140,7 +140,7 @@ widget_package.prototype.hideProgressBar = function () {
 widget_package.prototype.enterDocument = function () {
     jQuery.get(this.URL_BASE + "/static/packages/templates/packages.html", function (template) {
         this.widget_script_package = jQuery(this.widget_script_package);
-        this.divPackages = jQuery("<div class=\"ssoft\"></div>");
+        this.divPackages = jQuery("<div class=\"widget-app\"></div>");
         this.divPackages.html(template);
         //color
         this.divPackages.find(".bcolor3").css("background-color", this.BACKGROUND_COLOR);
