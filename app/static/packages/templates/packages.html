@@ -1,104 +1,77 @@
 <div id="paquetes" class="bcolor3 ui-tabs-panel ui-widget-content ui-corner-bottom" >
-            
-<!--- paquetes -->
-<div id="ucBuscador_UcBuscadorPlan1_upBuscador">
-	
+
+    <!--- paquetes -->
+    <div id="ucBuscador_UcBuscadorPlan_upBuscador">
+
         <div class="full iblock contenidoBuscador">
             <!--- Filtro de texto -->
             <div class="div100Buscador">
-                <input name="ucBuscador$UcBuscadorPlan1$txtFiltroTexto" type="text" id="ucBuscador_UcBuscadorPlan1_txtFiltroTexto" class="formaBuscar ac_input" placeholder="Búsqueda por palabra clave">
+                <input name="ucBuscador_UcBuscadorPlan_txtFiltroTexto" type="text" id="ucBuscador_UcBuscadorPlan_txtFiltroTexto" class="formaBuscar ac_input" placeholder="Búsqueda por palabra clave">
             </div>
             <!--- zona -->
             <div class="div100Buscador">
-                <div id="ucBuscador_UcBuscadorPlan1_UpdatePanel4">
-		
-                        <span id="ucBuscador_UcBuscadorPlan1_lblTZona" class="titcomp labelBuscar">Zona geográfica</span>
-                        <select name="ucBuscador$UcBuscadorPlan1$ddlZonaGeo" onchange="javascript:setTimeout('__doPostBack(\'ucBuscador$UcBuscadorPlan1$ddlZonaGeo\',\'\')', 0)" id="ucBuscador_UcBuscadorPlan1_ddlZonaGeo" class="formaBuscar">
-			<option value="4">Asia</option>
-			<option value="10">Caribe</option>
-			<option value="7">Centro America</option>
-			<option value="3">Europa</option>
-			<option value="2">Norte America</option>
-			<option value="1">Sur America</option>
-			<option selected="selected" value="0"></option>
+                <div id="ucBuscador_UcBuscadorPlan_UpdatePanel4">
 
-		</select>
-                    
-	</div>
+                    <span id="ucBuscador_UcBuscadorPlan_lblTZona" class="titcomp labelBuscar">Zona geográfica</span>
+                    <select name="ucBuscadorUcBuscadorPlanddlZonaGeo" id="ucBuscador_UcBuscadorPlan_ddlZonaGeo" class="formaBuscar">			
+                        <option selected="selected" value="0"></option>
+
+                    </select>
+
+                </div>
             </div>
             <!--- pais -->
             <div class="div100Buscador">
-                <div id="ucBuscador_UcBuscadorPlan1_UpdatePanel1">
-		
-                        <span id="ucBuscador_UcBuscadorPlan1_lblTPais" class="titcomp labelBuscar">País</span>
-                        <select name="ucBuscador$UcBuscadorPlan1$ddlPais" onchange="javascript:setTimeout('__doPostBack(\'ucBuscador$UcBuscadorPlan1$ddlPais\',\'\')', 0)" id="ucBuscador_UcBuscadorPlan1_ddlPais" class="formaBuscar">
+                <div id="ucBuscador_UcBuscadorPlan_UpdatePanel1">
 
-		</select>
-                    
-	</div>
+                    <span id="ucBuscador_UcBuscadorPlan_lblTPais" class="titcomp labelBuscar">País</span>
+                    <select name="ucBuscadorUcBuscadorPlanddlPais"  id="ucBuscador_UcBuscadorPlan_ddlPais" class="formaBuscar">
+
+                    </select>
+
+                </div>
             </div>
             <!--- ciudad -->
             <div class="div100Buscador">
-                <div id="ucBuscador_UcBuscadorPlan1_UpdatePanel3">
-		
-                        <span id="ucBuscador_UcBuscadorPlan1_lblTCiudad" class="titcomp labelBuscar">Ciudad</span>
-                        <select name="ucBuscador$UcBuscadorPlan1$ddlCiudad" id="ucBuscador_UcBuscadorPlan1_ddlCiudad" class="formaBuscar">
+                <div id="ucBuscador_UcBuscadorPlan_UpdatePanel3">
 
-		</select>
-                    
-	</div>
+                    <span id="ucBuscador_UcBuscadorPlan_lblTCiudad" class="titcomp labelBuscar">Ciudad</span>
+                    <select name="ucBuscador_UcBuscadorPlan_ddlCiudad" id="ucBuscador_UcBuscadorPlan_ddlCiudad" class="formaBuscar">
+
+                    </select>
+
+                </div>
             </div>
             <!--- tipologia -->
             <div class="div100Buscador">
-                <div id="ucBuscador_UcBuscadorPlan1_UpdatePanel2">
-		
-                        <span id="ucBuscador_UcBuscadorPlan1_lblTipologia" class="titcomp labelBuscar">Actividad</span>
-                        <select name="ucBuscador$UcBuscadorPlan1$ddlTipologia" id="ucBuscador_UcBuscadorPlan1_ddlTipologia" class="formaBuscar">
-			<option value="12">Playa</option>
-			<option value="13">Aventura</option>
-			<option value="14">Familia</option>
-			<option value="15">Negocios</option>
-			<option value="16">Spa</option>
-			<option value="17">Romance</option>
-			<option value="18">Ciudad</option>
-			<option value="20">Solo Adultos</option>
-			<option value="21">Bodas</option>
-			<option value="23">Buceo</option>
-			<option value="24">Convenciones</option>
-			<option value="25">Quince Años</option>
-			<option value="26">Cruceros</option>
-			<option value="27">Año Nuevo</option>
-			<option value="28">Fin de Año</option>
-			<option value="29">Exóticos</option>
-			<option selected="selected" value="0"></option>
+                <div id="ucBuscador_UcBuscadorPlan_UpdatePanel2">
 
-		</select>
-                    
-	</div>
+                    <span id="ucBuscador_UcBuscadorPlan_lblTipologia" class="titcomp labelBuscar">Actividad</span>
+                    <select name="ucBuscador_UcBuscadorPlan_ddlTipologia" id="ucBuscador_UcBuscadorPlan_ddlTipologia" class="formaBuscar">                        
+                        <option selected="selected" value="0"></option>
+
+                    </select>
+
+                </div>
             </div>
             <!--- categoria de plan-->
-            
+
             <!--- fecha de viaje -->
-            
+
             <div class="contenedorBotonBuscar" style="float: none; margin-top: 2px; margin-right: 17px;">
-                <input type="submit" name="ucBuscador$UcBuscadorPlan1$lbBuscar" value="Buscar" onclick="javascript:Show_Cortinilla();try{$('#ucResultadoPlanes_btnCerrar2').click()}catch(ex){};" id="ucBuscador_UcBuscadorPlan1_lbBuscar" class="link-button white">
+                <input type="submit" name="ucBuscador_UcBuscadorPlan_lbBuscar" value="Buscar"  id="ucBuscador_UcBuscadorPlan_lbBuscar" class="link-button white">
             </div>
-            
-            
+
         </div>
-        <div id="ucBuscador_UcBuscadorPlan1_Div1" class="progressBarBuscador" style="text-align: center">
-            <div id="ucBuscador_UcBuscadorPlan1_udpEsperar" style="display:none;" role="status" aria-hidden="true">
-		
-                    <div class="progressbar">
-                    </div>
-                    <img alt="" src="App_Themes/Imagenes/loading.gif"><br>
-                    <span id="ucBuscador_UcBuscadorPlan1_lblEsperar">Espere por favor...</span>
-                
-	</div>
+        <div id="ucBuscador_UcBuscadorPlan_Div1" class="progressBarBuscador" style="text-align: center">
+            <div id="ucBuscador_UcBuscadorPlan_udpEsperar" style="display:none;" role="status" aria-hidden="true">
+                <span id="ucBuscador_UcBuscadorPlan_lblEsperar">Espere por favor...</span>
+
+            </div>
         </div>
         <div class="warningBuscador" id="divError">
-            <span id="ucBuscador_UcBuscadorPlan1_lblErrorGen" style="color:#186E9B;"></span>
+            <span id="ucBuscador_UcBuscadorPlan_lblErrorGen" style="color:#186E9B;"></span>
         </div>
-    
+
+    </div>
 </div>
-        </div>
