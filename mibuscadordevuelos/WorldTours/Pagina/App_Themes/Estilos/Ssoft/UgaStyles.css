@@ -1,12 +1,4 @@
 /* Estilos Generales */
-
-/* Fonts
-@import url(http://fonts.googleapis.com/css?family=Oswald) */
-@import '../jQuery/jquery-ui-1.8.6.custom.css';
-@import 'validationEngine.jquery.css';
-@import '../Slider/bjqs.css';
-@import 'latin-Oswald.css';
-
 :focus{
  outline:0}
 a img, iframe{
@@ -354,16 +346,16 @@ ul.dropMenu{
   cursor:pointer;
   display:block;
   /* 
-	if width will be 100% horizontal scrollbar will apear 
-	when scroll mode will be used
-	*/
+ if width will be 100% horizontal scrollbar will apear 
+ when scroll mode will be used
+ */
   /*width:100%;*/
   font:menu;
   font-size:14px;
   /* 
-	it is very important, if line-height not setted or setted 
-	in relative units scroll will be broken in firefox
-	*/
+ it is very important, if line-height not setted or setted 
+ in relative units scroll will be broken in firefox
+ */
   line-height:16px;
   overflow:hidden}
   .ac_results li:first-child{
@@ -378,7 +370,7 @@ ul.dropMenu{
    font-weight:bold;
    background:url(../../Imagenes/home_icon.png) #999 no-repeat 8px;
    /*background-color:rgba(168, 211, 247, 0.6);
-	background:url(../JQuery/images/airplane-icon.png.png) left no-repeat;*/}
+ background:url(../JQuery/images/airplane-icon.png.png) left no-repeat;*/}
 .ac_loading{
  background:url(../../Imagenes/ui-anim_basic_16x16.gif) right center no-repeat}
 .ac_odd:first-Child{
@@ -710,7 +702,7 @@ ul.dropMenu{
  position:absolute;
  margin-top:15px}
 .formaBuscar{
- width:80%;
+/*width:80%;*/
  border-radius:4px;
  color:#555555;
  background-color:#ffffff;
@@ -4158,9 +4150,9 @@ h4.trigger a{
   list-style:none}
  .utilitarios li{
   /* 
-		define width and height of list item (slide)
-		entire slider area will adjust according to the parameters provided here
-	*/
+  define width and height of list item (slide)
+  entire slider area will adjust according to the parameters provided here
+ */
   width:810px;
   height:225px;
   overflow:hidden}
@@ -4288,14 +4280,14 @@ ul#output{
     height:268px}
 /* bordes paneles */
 /*
-	ptlc = panel top left corner
-	ptrc = panel top right corner
-	pblc = pane bottom left corner
-	pbrc = panel bottom right corner
-	plb = panel left border
-	prb = panel right border
-	ptb = panel top border
-	pbb = panel bottom border 
+ ptlc = panel top left corner
+ ptrc = panel top right corner
+ pblc = pane bottom left corner
+ pbrc = panel bottom right corner
+ plb = panel left border
+ prb = panel right border
+ ptb = panel top border
+ pbb = panel bottom border 
 */
 
 .ptlc, .ptrc, .pblc, .pbrc{
@@ -4426,17 +4418,17 @@ table.display{
  width:100%;
  clear:both;
  /* Note Firefox 3.5 and before have a bug with border-collapse
-	 * ( https://bugzilla.mozilla.org/show%5Fbug.cgi?id=155955 ) 
-	 * border-spacing:0; is one possible option. Conditional-css.com is
-	 * useful for this kind of thing
-	 *
-	 * Further note IE 6/7 has problems when calculating widths with border width.
-	 * It subtracts one px relative to the other browsers from the first column, and
-	 * adds one to the end...
-	 *
-	 * If you want that effect I'd suggest setting a border-top/left on th/td's and 
-	 * then filling in the gaps with other borders.
-	 */}
+  * ( https://bugzilla.mozilla.org/show%5Fbug.cgi?id=155955 ) 
+  * border-spacing:0; is one possible option. Conditional-css.com is
+  * useful for this kind of thing
+  *
+  * Further note IE 6/7 has problems when calculating widths with border width.
+  * It subtracts one px relative to the other browsers from the first column, and
+  * adds one to the end...
+  *
+  * If you want that effect I'd suggest setting a border-top/left on th/td's and 
+  * then filling in the gaps with other borders.
+  */}
  table.display thead th{
   padding:3px 18px 3px 10px;
   border-bottom:1px solid black;
@@ -4570,13 +4562,13 @@ tr.even td.sorting_3{
 
 /* For the Conditional-CSS grading rows */
 /*
- 	Colour calculations (based off the main row colours)
+  Colour calculations (based off the main row colours)
   Level 1:
-		dd > c4
-		ee > d5
-	Level 2:
-	  dd > d1
-	  ee > e2
+  dd > c4
+  ee > d5
+ Level 2:
+   dd > d1
+   ee > e2
  */
 tr.odd.gradeA td.sorting_1{
  background-color:#c4ffc4}
@@ -6903,7 +6895,7 @@ h6{
  margin-right:0 !important}
 .unCu{
  width:37%;
- margin-top:-30px}
+/*margin-top:-30px*/}
 .asidedet{
  right:-40px;
  top:77px;
@@ -6990,7 +6982,7 @@ input{
  color:#737272;
 /*background:#f0f3f5;*/
  padding:5px 12px;
- width:90%;
+/*width:90%;*/
  font:14px/20px Oswald,sans-serif;
  height:20px;
  margin:7px 0}
@@ -7396,8 +7388,8 @@ aside.retractil{
   background:#fff;
   padding:3px;
   /*-webkit-box-shadow:0px 0px 4px rgba(0,0,0,.3);
-	-moz-box-shadow:0px 0px 4px rgba(0,0,0,.3);
-	box-shadow:0px 0px 4px rgba(0,0,0,.3);*/
+ -moz-box-shadow:0px 0px 4px rgba(0,0,0,.3);
+ box-shadow:0px 0px 4px rgba(0,0,0,.3);*/
  }
  .recent-post .post-head{
   float:left;
@@ -10208,9 +10200,9 @@ a.close{
  padding-right:0}
 .form-control{
  display:block;
- width:100%;
+/* width:100%;*/
  height:20px;
-  /*padding:3px 6px;*/
+/* padding:3px 6px;*/
  font-size:14px;
  line-height:1.42857143;
  color:#555555;
@@ -11150,23 +11142,23 @@ nav{
  float:left}
 #nav > li > a{
  /*display:block;
-	overflow:hidden;
-	padding:5px 10px 0px 10px;
-	color:#35B0E5;
-	background:rgba(0,0,0,.0);
+ overflow:hidden;
+ padding:5px 10px 0px 10px;
+ color:#35B0E5;
+ background:rgba(0,0,0,.0);
 
-	text-shadow:0 -1px rgba(0, 0, 0, 0.5);
+ text-shadow:0 -1px rgba(0, 0, 0, 0.5);
 
-	-webkit-transition:all 0.3s ease;
-	-moz-transition:all 0.3s ease;
-	-o-transition:all 0.3s ease;
-	transition:all 0.3s ease;*/}
+ -webkit-transition:all 0.3s ease;
+ -moz-transition:all 0.3s ease;
+ -o-transition:all 0.3s ease;
+ transition:all 0.3s ease;*/}
  #nav > li > a:hover,
  #nav > li.current-menu-item > a,
  #nav > li.current_page_item > a{
   /*background:#303232;
-	background:rgba(0,0,0,.2);
-	border-bottom:solid #1c1d1d 5px;*/
+ background:rgba(0,0,0,.2);
+ border-bottom:solid #1c1d1d 5px;*/
  }
 #nav > li.current-menu-item > a,
 #nav > li.current_page_item > a{
@@ -11274,8 +11266,8 @@ nav{
  margin-right:0 !important}
 .unCu{
  width:30%;
- margin-top:24px;
- margin-left:60px;
+/*margin-top:24px;
+ margin-left:60px;*/
  display:inline-block;
  height:430px}
 .asidedet{
@@ -11364,7 +11356,7 @@ input{
  color:#001f5b;
 /*background:white;*/
  padding:5px 12px;
- width:90%;
+/*width:90%;*/
  height:20px}
 select{
  cursor:pointer;
@@ -11769,8 +11761,8 @@ aside.retractil{
  background:#fff;
  padding:3px;
  /*-webkit-box-shadow:0px 0px 4px rgba(0,0,0,.3);
-	-moz-box-shadow:0px 0px 4px rgba(0,0,0,.3);
-	box-shadow:0px 0px 4px rgba(0,0,0,.3);*/}
+ -moz-box-shadow:0px 0px 4px rgba(0,0,0,.3);
+ box-shadow:0px 0px 4px rgba(0,0,0,.3);*/}
 .recent-post .post-head{
  float:left;
  width:184px;
@@ -11934,7 +11926,7 @@ aside.retractil{
 .buscadorHome{
  position:relative;
  z-index:1001;
- padding:12px}
+/* padding:12px*/}
 /*#tabs .ui-tabs-active a{
  border-style:hidden}*/
 .Popupsession{
@@ -14577,49 +14569,3 @@ aside.retractil{
  font-size:15px}
 .sltSortSupHotels label{
  cursor:pointer}
-
-
-
-input.input-medium.span.hasDatepicker{
- border-radius:4px;
- color:#555555;
- cursor:pointer;
- background:url(../../Imagenes/calendario.png)99px center no-repeat,#eee}
-div#formID.contenidoBuscador>.radioButtonList{height:50px}
-div#formID.contenidoBuscador>.radioButtonList>*{
- float:left;
- /* height:50%; */
- text-align:center}
-div#formID.contenidoBuscador>.radioButtonList>:nth-child(-n+2){/* background:linear-gradient(90deg,#F00,#000); */width:26%}
-div#formID.contenidoBuscador>.radioButtonList>:last-child{width:48%}
-div#formID.contenidoBuscador>.radioButtonList input{
- /* display:block; */
- margin:0;
- float:left;zoom:70%}
-#tabs ul li{
- float:left;
- width:25%}
-div#tabs div#vuelos.bcolor1{background:
- linear-gradient(45deg,rgba(0,0,0,.5),rgba(0,0,250,.3)),repeating-linear-gradient(45deg,rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(-45deg,rgba(99,99,99,.25),rgba(0,0,0,.5)5%),repeating-linear-gradient(rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(90deg,rgba(99,99,99,.5),rgba(0,0,0,.5)6.5%)!important}
-div#tabs div#hoteles.bcolor2{background:
- linear-gradient(45deg,rgba(0,0,0,.5),rgba(100,255,245,.5)),repeating-linear-gradient(45deg,rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(-45deg,rgba(99,99,99,.25),rgba(0,0,0,.5)5%),repeating-linear-gradient(rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(90deg,rgba(99,99,99,.5),rgba(0,0,0,.5)6.5%)!important}
-div#tabs div#autos.bcolor5{background:
- linear-gradient(-45deg,rgba(120,4,4,.5),rgba(255,160,0,.75)),repeating-linear-gradient(45deg,rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(-45deg,rgba(99,99,99,.25),rgba(0,0,0,.5)5%),repeating-linear-gradient(rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(90deg,rgba(99,99,99,.5),rgba(0,0,0,.5)6.5%)!important}
-div#tabs div#paquetes.bcolor3{background:
- linear-gradient(45deg,rgba(0,0,0,.5),rgba(255,67,0,.5)),repeating-linear-gradient(-45deg,rgba(99,99,99,.25),rgba(0,0,0,.5)5%),repeating-linear-gradient(rgba(99, 99, 99, 0.5),rgba(0,0,0,.25)5%),repeating-linear-gradient(90deg,rgba(99,99,99,.5),rgba(0,0,0,.5)6.5%)!important}
-div#tabs>ul.ui-tabs-nav input[type=radio]{background:transparent}
-div#tabs>ul.ui-tabs-nav input.input-large{background:#FFF}
-#div_Cortinilla{
- left:25%;
- height:50%;
- position:fixed;
- top:25%;
- width:50%}
-.IngresoDestinoHotel{
- color:#FFF;
- height:50px}
-#origen,#destino{width:95%}
-.IngresoDestinoHotel input{
- float:right;
- margin:0;
- width:67%}

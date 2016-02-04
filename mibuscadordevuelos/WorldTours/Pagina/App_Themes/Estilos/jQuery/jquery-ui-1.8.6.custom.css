@@ -2321,35 +2321,3 @@ button.ui-button::-moz-focus-inner
     .buscador .ui-tabs .ui-tabs-panel table{
         color: #fff;
         font-size: 12px}
-
-
-
-
-div#tabs.ui-tabs>ul.ui-tabs-nav>li.pestanaVuelos.ui-tabs-active{background:#337}
-div#tabs.ui-tabs>ul.ui-tabs-nav>li.pestanaHoteles.ui-tabs-active{background:#488}
-div#tabs.ui-tabs>ul.ui-tabs-nav>li.pestanaAutos.ui-tabs-active,td.ui-datepicker-current-day>a.ui-state-default{background:#B72!important}
-div#tabs.ui-tabs>ul.ui-tabs-nav>li.pestanaPaquetes.ui-tabs-active{background:#A31!important}
-div#ui-datepicker-div{
- background:radial-gradient(#000,rgba(99,99,0,.5));
- perspective:30em}
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
- background:rgba(6,6,6,.75)}
-.ui-datepicker td{background:none!important}
-.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{border-radius:1em}
-.ui-state-hover .ui-icon,.ui-state-focus .ui-icon{background:url(images/ui-icons_d8e7f3_256x240.png)-48px -192px,#0AA}
-.ui-datepicker .ui-datepicker-header{background:linear-gradient(rgb(0,99,250),rgba(0,0,0,.5))}
-th{background:linear-gradient(transparent,#FFF,#FFF,transparent)}
-th:nth-child(even){border-radius:1.5em 0}
-th:nth-child(odd){border-radius:0 1.5em}
-tr>td>a.ui-state-hover{background:#FFF!important}
-.ui-datepicker-multi .ui-datepicker-group{
- float:left;
- box-shadow:0 10px 1em}
-.ui-datepicker-group.ui-datepicker-group-first{transform:rotateY(30deg)}
-.ui-datepicker-group.ui-datepicker-group-last{transform:rotateY(-30deg)}
-.ui-tabs-active>a.ui-tabs-anchor{border-bottom:2px solid}
-li.ui-corner-top>div{
- left:0;
- position:absolute}
-div#tabs div.ui-tabs-panel{display:none}
-div#tabs li.ui-tabs-active.ui-state-active div.ui-tabs-panel{display:block!important}

@@ -12,9 +12,9 @@ handlers:
 - url: /WorldTours\
   static_dir: WorldTours
 
-- url: /INICIAR_APLI_DE_VUELOS\.js
-  static_files: INICIAR_APLI_DE_VUELOS.js
-  upload: INICIAR_APLI_DE_VUELOS\.js
+- url: /iniciar_apli_de_vuelos\.js
+  static_files: iniciar_apli_de_vuelos.js
+  upload: iniciar_apli_de_vuelos\.js
 
 - url: .*
   script: main.app
