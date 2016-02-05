@@ -394,7 +394,7 @@ function ArmarUrlVuelosHotel() {
         params = params + "&ninios=" + edadesNinios.substring(0, edadesNinios.length - 1);
     }
     if (msgError.length < 3) {
-        window.location.href='http://162.248.52.194/worldtours/pagina/'+url+params+'#autos'
+        window.location.href=i.hrf+url+params+'#autos'
     }
     else
         ModalMensaje(msgError);
@@ -450,7 +450,7 @@ $(document).ready(function () {
         source: function (request, response) {
             var aeropuertos = new Array();
             $.ajax({
-                url: "http://162.248.52.194/Worldtours/pagina/ajax.ashx",
+                url: i.hrf+'ajax.ashx',
                 data: { MethodName: "GetDataVuelosHotels", term: request.term, limit: 99 },
                 async: false,
                 type: "get",

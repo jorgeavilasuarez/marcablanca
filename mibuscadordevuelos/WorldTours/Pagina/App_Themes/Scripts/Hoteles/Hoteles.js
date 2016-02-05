@@ -411,7 +411,7 @@ function ArmarUrlHoteles() {
 
     if (msgError.length < 3) {
         var urlComplete = url + params + "#hoteles";
-        window.location.href='http://162.248.52.194/worldtours/pagina/'+urlComplete;
+        window.location.href=i.hrf+urlComplete;
     } else {
         HideCortinilla();
         ModalMensaje(msgError);
@@ -458,7 +458,7 @@ $(document).ready(function () {
         source: function (request, response) {
             var CiudadesHoteles = new Array();
             $.ajax({
-                url: "http://162.248.52.194/worldtours/pagina/ajax.ashx",
+                url: i.hrf+'ajax.ashx',
                 data: { MethodName: "GetDataHoteles", termHoteles: request.term, limitHoteles: 99 },
                 async: false,
                 type: "get",

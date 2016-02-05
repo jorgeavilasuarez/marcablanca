@@ -2,12 +2,12 @@
  * Inicialza el widget de paquetes.
  * @constructor 
  */
-var widget_package = function () {
+var widget_package = function (script) {
   //this.widget_script_package = document.getElementById("widget_script_package");
-    this.URL_BASE = '//search-flights.appspot.com' //this.URL_BASE = this.widget_script_package.getAttributeNode("data-url-base").value;
-    this.URL_SEARCH = '//162.248.52.194/MBEmpaqueyvamonos/Pagina/Planes' //this.URL_SEARCH = this.widget_script_package.getAttributeNode("data-url-search").value;
-    this.URL_HANDLER=this.URL_SEARCH+'/../handlers/PlanesMarcablanca.ashx'/*this.URL_HANDLER = this.widget_script_package.getAttributeNode("data-url-handler").value;
-    this.BACKGROUND_COLOR = this.widget_script_package.getAttributeNode("data-background-color").value;
+    this.URL_BASE = script.getAttribute('data-url-base')+'/'
+    this.URL_SEARCH = script.getAttribute('data-url-search')+'/'
+    this.URL_HANDLER = script.getAttribute('data-url-handler')+'/'
+    /*this.BACKGROUND_COLOR = this.widget_script_package.getAttributeNode("data-background-color").value;
     //cargamos estilos y jquery
     this.loadjscssfile(this.URL_BASE + this.URL_STYLES, "css");
     this.loadjscssfile(this.URL_BASE + this.URL_JQUERY, "js");*/
@@ -23,7 +23,7 @@ var widget_package = function () {
  * Contiene la url de la plantilla.
  * @const
  */
-widget_package.prototype.URL_TEMPLATE = "/static/packages/production/templates/packages.html";
+widget_package.prototype.URL_TEMPLATE = "static/packages/production/templates/packages.html";
 
 /**
  * Contiene la url de jQuery.
@@ -210,7 +210,7 @@ widget_package.prototype.loadTipologiasYZonasGeograficas = function (result) {
 (window["jqueryCargado"] = function () {
     /*evitamos colisiones de jquery
     jQuery.noConflict();*/
-    (__obj_widget_package = new widget_package).enterDocument();
+    (__obj_widget_package = new widget_package(widget_search_flights)).enterDocument();
 }.bind(this))()
 
 //punto de entrada

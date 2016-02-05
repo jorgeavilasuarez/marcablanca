@@ -152,7 +152,7 @@ function ArmarUrl() {
     }
     if (msgError.length < 3) {
         //window.location.href = url + params;alert
-        window.location.href='http://162.248.52.194/worldtours/pagina/'+url+params}
+        window.location.href=i.hrf+url+params}
     else
         ModalMensaje(msgError);
 }
@@ -189,7 +189,7 @@ $(document).ready(function () {
         source: function (request, response) {
             var aeropuertos = new Array();
             $.ajax({
-                url: "http://162.248.52.194/Worldtours/pagina/ajax.ashx",
+                url: i.hrf+'ajax.ashx',
                 data: { MethodName: "GetData", term: request.term, limit: 99 },
                 async: false,
                 type: "get",
