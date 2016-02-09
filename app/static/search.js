@@ -96,6 +96,15 @@ function CambioInfantes(nro) {
     LlenaredadesInfantes();
 }
 
+var _origenname;//=  getQueryVariable("origen");//;'BOG (Bogota)';
+var _destinoname;// = getQueryVariable("destino");//'MIA (Miami)';
+var _fechaSalida;// = getQueryVariable("fechaSalida");// '2016-02-11';
+var _fechaRegreso;// =  getQueryVariable("fechaLLegada");//'2016-02-27';
+var _nroAdultos;// =  getQueryVariable("adul");//'1';
+var _nroInfantes;// = getQueryVariable("inf");//'0';
+var _edades = new Array();// = '';
+var _aerolinea;// = '';
+
 function ArmarUrl() {
     var URL_SEARCH = $("#ssoft_white_label").attr("data-url-search");
     if(URL_SEARCH == null){
@@ -115,6 +124,15 @@ function ArmarUrl() {
     var arregloEdadesNinos = new Array();
     var arregloEdadesInf = new Array();
     var nroPasajeros = parseInt(nroInfantes) + parseInt(nroAdultos) + parseInt(nroNinios);
+    
+     _origen=origen;//=  getQueryVariable("origen");//;'BOG (Bogota)';
+     _destino=destino;// = getQueryVariable("destino");//'MIA (Miami)';
+     _fechaSalida=fechaSalida;// = getQueryVariable("fechaSalida");// '2016-02-11';
+     _fechaRegreso=fechaLLegada;// =  getQueryVariable("fechaLLegada");//'2016-02-27';
+     _nroAdultos=nroAdultos;// =  getQueryVariable("adul");//'1';
+     _nroInfantes=nroNinios;// = getQueryVariable("inf");//'0';
+     _edades;// = '';
+     _aerolinea;// = '';
 
     $.each($(".edadesNinos"), function (i, val) {
         var edad = $(val).val();
@@ -150,10 +168,13 @@ function ArmarUrl() {
         params = params + "&ninios=" + edadesNinios.substring(0, edadesNinios.length - 1);
     }
     if (msgError.length < 3) {
-        window.location.href = url + params;
+        //window.location.href = url + params;
+        debugger;        
+        SearchData();
     }
-    else
+    else{
         ModalMensaje(msgError);
+    }
 }
 
 $("#btnBuscarVuelo").on("click", function (e) {

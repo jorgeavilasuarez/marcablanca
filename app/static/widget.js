@@ -35,7 +35,7 @@ var ssof_Content_html =""
 +"    <div class=\"row\">"
 +"        <label class=\"contenidoBuscador span\" id=\"lblRegresoVuelos\">Fecha de Regreso</label>"
 +"        <label class=\"spanSpace\">&nbsp;</label>"
-+"		<input type=\"text\" id=\"FechaLlegada\" class=\"validate[required]  form-control input-medium span input-calendar\" placeholder=\"Selecciona Fecha\" readonly=\"readonly\" style=\"background-image: url('http://search-flights.appspot.com/static/calendario.png'); background-repeat: no-repeat; background-position-x: 99px;\"/>"
++"        <input type=\"text\" id=\"FechaLlegada\" class=\"validate[required]  form-control input-medium span input-calendar\" placeholder=\"Selecciona Fecha\" readonly=\"readonly\" style=\"background-image: url('http://search-flights.appspot.com/static/calendario.png'); background-repeat: no-repeat; background-position-x: 99px;\"/>"
 +"        "
 +"    </div>"
 +"    <div class=\"row\">"
@@ -121,20 +121,21 @@ loadjscssfile(SSOFT_URL_BASE + "/static/salida.css", "css");
 loadjscssfile(SSOFT_URL_BASE + "/static/jquery.min.js", "js");
 
 function jqueryCargado(){
-	$.when(
-		$.getScript( SSOFT_URL_BASE + "/static/jquery-ui.js" ),
-		$.getScript( SSOFT_URL_BASE + "/static/jquery.validationEngine.js" ),
-		$.getScript( SSOFT_URL_BASE + "/static/jquery.validationEngine-es.js" ),
-		$.getScript( SSOFT_URL_BASE + "/static/jquery.autocomplete.js" ),
-		$.Deferred(function( deferred ){
-			$( deferred.resolve );
-		})
-	).done(function(){
-    $.getScript( SSOFT_URL_BASE + "/static/search.js",function(){
-		
-	} );
-		//place your code here, the scripts are all loaded
+    $.when(
+        $.getScript( SSOFT_URL_BASE + "/static/jquery-ui.js" ),
+        $.getScript( SSOFT_URL_BASE + "/static/jquery.validationEngine.js" ),
+        $.getScript( SSOFT_URL_BASE + "/static/jquery.validationEngine-es.js" ),
+        $.getScript( SSOFT_URL_BASE + "/static/jquery.autocomplete.js" ),
+        $.Deferred(function( deferred ){
+            $( deferred.resolve );
+        })
+    ).done(function(){
+        $.getScript( SSOFT_URL_BASE + "/static/searchResult.js",function(){}); 
+        $.getScript( SSOFT_URL_BASE + "/static/search.js",function(){
+        
+         });
+        //place your code here, the scripts are all loaded
 
-	});			
+    });            
 }
 
