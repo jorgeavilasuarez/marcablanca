@@ -1,0 +1,96 @@
+/*@import*/
+@import 'UgaStyles.css';
+@import '../jQuery/jquery-ui-1.8.6.custom.css';
+@import 'validationEngine.jquery.css';
+@import '../Slider/bjqs.css';
+@import 'latin-Oswald.css';
+
+#ssoft_white_label{min-width:270px!important}
+#ssoft_white_label ul.pro-bar>li{opacity:0!important}
+#ssoft_white_label ul.pro-bar{
+ background:#09C;
+ display:block!important;
+ height:5px!important;
+ width:0!important}
+
+/*UgaStyles.css*/
+input.input-medium.span.hasDatepicker{
+ border-radius:4px;
+ color:#555555;
+ cursor:pointer;
+ background:url(../../Imagenes/calendario.png)99px center no-repeat,#eee}
+div#formID.contenidoBuscador>.radioButtonList{height:50px}
+div#formID.contenidoBuscador>.radioButtonList>*{
+ float:left;
+ /* height:50%; */
+ text-align:center}
+div#formID.contenidoBuscador>.radioButtonList>:nth-child(-n+2){/* background:linear-gradient(90deg,#F00,#000); */width:26%}
+div#formID.contenidoBuscador>.radioButtonList>:last-child{width:48%}
+div#formID.contenidoBuscador>.radioButtonList input{
+ /* display:block; */
+ margin:0;
+ float:left;zoom:70%}
+#tabs ul li{
+ float:left;
+ transition:.5s;
+ width:25%}
+div#tabs div#vuelos.bcolor1{background:
+ linear-gradient(45deg,rgba(0,0,0,.5),midnightblue),repeating-linear-gradient(45deg,rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(-45deg,rgba(99,99,99,.25),rgba(0,0,0,.5)5%),repeating-linear-gradient(rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(90deg,rgba(99,99,99,.5),rgba(0,0,0,.5)6.5%)!important}
+div#tabs div#hoteles.bcolor2{background:
+ linear-gradient(45deg,rgba(0,0,0,.5),rgba(100,255,245,.5)),repeating-linear-gradient(45deg,rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(-45deg,rgba(99,99,99,.25),rgba(0,0,0,.5)5%),repeating-linear-gradient(rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(90deg,rgba(99,99,99,.5),rgba(0,0,0,.5)6.5%)!important}
+div#tabs div#autos.bcolor5{background:
+ linear-gradient(-45deg,rgba(120,4,4,.5),peru),repeating-linear-gradient(45deg,rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(-45deg,rgba(99,99,99,.25),rgba(0,0,0,.5)5%),repeating-linear-gradient(rgba(99,99,99,.25),rgba(0,0,0,.25)5%),repeating-linear-gradient(90deg,rgba(99,99,99,.5),rgba(0,0,0,.5)6.5%)!important}
+div#tabs div#paquetes.bcolor3{background:
+ linear-gradient(45deg,rgba(0,0,0,.5),#A31),repeating-linear-gradient(-45deg,rgba(99,99,99,.25),rgba(0,0,0,.5)5%),repeating-linear-gradient(rgba(99, 99, 99, 0.5),rgba(0,0,0,.25)5%),repeating-linear-gradient(90deg,rgba(99,99,99,.5),rgba(0,0,0,.5)6.5%)!important}
+div#tabs>ul.ui-tabs-nav input[type=radio]{background:transparent}
+div#tabs>ul.ui-tabs-nav input.input-large{background:#FFF}
+#div_Cortinilla{
+ left:25%;
+ height:50%;
+ position:fixed;
+ top:25%;
+ width:50%}
+.IngresoDestinoHotel{
+ color:#FFF;
+ height:50px}
+/*#origen,#destino{width:95%}*/
+.IngresoDestinoHotel input{
+ float:right;
+ margin:0;
+ width:67%}
+
+.row{text-align:left!important}
+div.contenidoBuscador#formID > .radioButtonList input{
+ width:100%;
+ zoom:80%}
+.formaBuscar{width:83%}
+
+/*jquery-ui-1.8.6.custom.css*/
+div#tabs.ui-tabs>ul.ui-tabs-nav>li.pestanaVuelos.ui-tabs-active{background:#337}
+div#tabs.ui-tabs>ul.ui-tabs-nav>li.pestanaHoteles.ui-tabs-active{background:#488}
+div#tabs.ui-tabs>ul.ui-tabs-nav>li.pestanaAutos.ui-tabs-active,td.ui-datepicker-current-day>a.ui-state-default{background:#B72!important}
+div#tabs.ui-tabs>ul.ui-tabs-nav>li.pestanaPaquetes.ui-tabs-active{background:#A31!important}
+div#ui-datepicker-div{
+ background:radial-gradient(#000,rgba(99,99,0,.5));
+ perspective:30em}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+ background:rgba(6,6,6,.75)}
+.ui-datepicker td{background:none!important}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{border-radius:1em}
+.ui-state-hover .ui-icon,.ui-state-focus .ui-icon{background:url(images/ui-icons_d8e7f3_256x240.png)-48px -192px,#0AA}
+.ui-datepicker .ui-datepicker-header{background:linear-gradient(rgb(0,99,250),rgba(0,0,0,.5))}
+th{background:linear-gradient(transparent,#FFF,#FFF,transparent)}
+th:nth-child(even){border-radius:1.5em 0}
+th:nth-child(odd){border-radius:0 1.5em}
+tr>td>a.ui-state-hover{background:#FFF!important}
+.ui-datepicker-multi .ui-datepicker-group{
+ float:left;
+ box-shadow:0 10px 1em}
+.ui-datepicker-group.ui-datepicker-group-first{transform:rotateY(30deg)}
+.ui-datepicker-group.ui-datepicker-group-last{transform:rotateY(-30deg)}
+.ui-tabs-active>a.ui-tabs-anchor{border-bottom:2px solid}
+li.ui-corner-top>div{
+ left:0;
+ position:absolute}
+div#tabs div.ui-tabs-panel{display:none}
+div#tabs li.ui-tabs-active.ui-state-active div.ui-tabs-panel{display:block!important}

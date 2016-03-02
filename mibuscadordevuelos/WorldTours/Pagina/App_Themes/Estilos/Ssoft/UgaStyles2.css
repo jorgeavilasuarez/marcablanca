@@ -1,0 +1,23 @@
+ul.ui-tabs-nav>li{
+ float:left;
+ list-style-type:none;
+ width:32%}
+#content{
+ color:#FFF;
+ font:1em/1 Arial;
+ height:380px;
+ width:260px}
+ul.ui-tabs-nav{
+ background:#333;
+ float:left;
+ margin:0;
+ padding:0;
+ width:260px}
+div.ui-tabs-panel{
+ float:left;
+ width:260px}
+#vuelos{
+ background:#00F}
+.input-large{
+ width:95%}
+#formID>div.row{float:left}
